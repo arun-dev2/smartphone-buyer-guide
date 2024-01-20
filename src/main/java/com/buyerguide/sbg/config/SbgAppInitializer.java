@@ -21,7 +21,7 @@ public class SbgAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	@Override
 	protected String[] getServletMappings() {
 		
-		String arr[] = {"/buyerguide/*"};
+		String arr[] = {"/"};
 		return arr;
 	}
 
