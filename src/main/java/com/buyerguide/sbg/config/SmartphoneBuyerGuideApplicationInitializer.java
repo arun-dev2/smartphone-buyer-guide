@@ -8,8 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-
-public class SmartphoneBuyerGuideApplicationInitializer implements WebApplicationInitializer{
+/**
+ * to get the complete control of dispatcher servlet then use the WebApplicationInitializer interface
+ */
+public class SmartphoneBuyerGuideApplicationInitializer //implements WebApplicationInitializer
+{
 
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
