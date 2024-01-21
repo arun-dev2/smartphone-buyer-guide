@@ -48,6 +48,14 @@
 			120 W<form:radiobutton path="chargerType" value="120 w" />
 			60 W<form:radiobutton path="chargerType" value="60 w" />
 			<br>
+			<div align = "center">
+			<h2>Communication</h2>
+			<label>Email :</label>
+			<form:input path="contactDTO.email" />
+			
+			<label>Phone :</label>
+			<form:input path="contactDTO.phone" />
+			</div>
 			<input type="submit" value="register">
 
 		</form:form>

@@ -3,13 +3,17 @@ package com.buyerguide.sbg.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+import com.buyerguide.sbg.formatter.PhoneNumberFormatter;
 
 @EnableWebMvc // used to enable all spring mvc configuration
 @Configuration
 @ComponentScan(basePackages = "com.buyerguide.sbg.controllers")
-public class SmartphoneBuyerGuideConfig {
+public class SmartphoneBuyerGuideConfig implements WebMvcConfigurer {
 	
 	// set up view resolver
 	@Bean
@@ -19,5 +23,13 @@ public class SmartphoneBuyerGuideConfig {
 		vs.setSuffix(".jsp");
 		return vs;
 	}
+	
+	@Override
+	public void addFormatters(FormatterRegistry registry){
+		registry.addFormatter(new PhoneNumberFormatter());
+		
+	}
+	
+	
 
 }

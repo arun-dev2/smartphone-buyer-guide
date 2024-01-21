@@ -11,6 +11,7 @@ public class UserRegistrationDTO {
 	private String countryName;
 	private String[] requiredSpecification;
 	private String chargerType;
+	private ContactDTO contactDTO;
 
 	public String getChargerType() {
 		return chargerType;
@@ -58,6 +59,14 @@ public class UserRegistrationDTO {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public ContactDTO getContactDTO() {
+		return contactDTO;
+	}
+
+	public void setContactDTO(ContactDTO contactDTO) {
+		this.contactDTO = contactDTO;
 	}
 
 

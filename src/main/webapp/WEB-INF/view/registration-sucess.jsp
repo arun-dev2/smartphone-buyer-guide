@@ -21,5 +21,9 @@
 	</c:forEach>
 	<br> ChargerType: ${userRegistrationInfo.chargerType}
 	<br>
+	Email: ${userRegistrationInfo.contactDTO.email} 
+	<br>
+	Phone: ${userRegistrationInfo.contactDTO.phone} 
+	<br>
 </body>
 </html>
