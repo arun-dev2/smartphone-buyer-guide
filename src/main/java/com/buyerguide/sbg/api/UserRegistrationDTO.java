@@ -2,6 +2,8 @@ package com.buyerguide.sbg.api;
 
 import org.springframework.stereotype.Component;
 
+import com.buyerguide.sbg.validator.Price;
+
 @Component
 public class UserRegistrationDTO {
 
@@ -11,6 +13,8 @@ public class UserRegistrationDTO {
 	private String countryName;
 	private String[] requiredSpecification;
 	private String chargerType;
+	@Price(min = 10000 , max = 50000)
+	private Integer expectedPrice;
 	private ContactDTO contactDTO;
 
 	public String getChargerType() {
@@ -68,6 +72,15 @@ public class UserRegistrationDTO {
 	public void setContactDTO(ContactDTO contactDTO) {
 		this.contactDTO = contactDTO;
 	}
+
+	public Integer getExpectedPrice() {
+		return expectedPrice;
+	}
+
+	public void setExpectedPrice(Integer expectedPrice) {
+		this.expectedPrice = expectedPrice;
+	}
+
 
 
 }

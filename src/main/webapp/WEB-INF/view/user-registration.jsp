@@ -6,6 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Register</title>
+
+<style type="text/css">
+.error {
+	color: red;
+	position: fixed;
+	text-align: left;
+	margin-left: 30px;
+}
+</style>
 </head>
 <body>
 
@@ -47,6 +56,11 @@
 			<label>Charger Variant :</label>
 			120 W<form:radiobutton path="chargerType" value="120 w" />
 			60 W<form:radiobutton path="chargerType" value="60 w" />
+			<br>
+			<br>
+			<label>Expected Budget Price :</label>
+			<form:input path="expectedPrice" />
+			<form:errors path="expectedPrice" cssClass="error"></form:errors>
 			<br>
 			<div align = "center">
 			<h2>Communication</h2>

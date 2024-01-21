@@ -1,6 +1,12 @@
 package com.buyerguide.sbg.controllers;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,7 +22,16 @@ public class RegistrationController {
 	}
 	
 	@RequestMapping("/registration-sucess")
-	public String processUSerRegistration(@ModelAttribute("userRegistrationInfo") UserRegistrationDTO userRegistrationDTO) {
+	public String processUSerRegistration(@Valid @ModelAttribute("userRegistrationInfo") UserRegistrationDTO userRegistrationDTO, BindingResult result) {
+		
+		if (result.hasErrors()) {
+			List<ObjectError> allErrors = result.getAllErrors();
+			for (ObjectError eacherror: allErrors ) {
+				System.out.println(eacherror);
+			}
+			return "user-registration";
+		}
+		
 		return "registration-sucess";
 	}
 }

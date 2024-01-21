@@ -20,6 +20,7 @@
 	${temp}
 	</c:forEach>
 	<br> ChargerType: ${userRegistrationInfo.chargerType}
+	<br> Expected Budget Price: ${userRegistrationInfo.expectedPrice}
 	<br>
 	Email: ${userRegistrationInfo.contactDTO.email} 
 	<br>
