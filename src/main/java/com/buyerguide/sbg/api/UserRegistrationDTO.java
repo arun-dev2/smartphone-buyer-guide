@@ -1,12 +1,15 @@
 package com.buyerguide.sbg.api;
 
+import javax.validation.constraints.NotEmpty;
+
 import org.springframework.stereotype.Component;
 
 import com.buyerguide.sbg.validator.Price;
 
 @Component
 public class UserRegistrationDTO {
-
+	
+	@NotEmpty(message = "* name cannot be null / empty.")
 	private String name;
 	private String userName;
 	private char[] password;

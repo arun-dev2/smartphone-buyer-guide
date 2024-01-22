@@ -24,9 +24,11 @@
 		<form:form action = "registration-sucess" method = "Get" modelAttribute="userRegistrationInfo">
 			<label>Name :</label>
 			<form:input path="name" />
+			<form:errors path="name" cssClass="error"></form:errors>
 			<br>
 			<label>User Name :</label>
 			<form:input path="userName" />
+			<form:errors path="userName" cssClass="error"></form:errors>
 			<br>
 			<label>Password :</label>
 			<form:password path="password" />
@@ -66,9 +68,11 @@
 			<h2>Communication</h2>
 			<label>Email :</label>
 			<form:input path="contactDTO.email" />
-			
+			<form:errors path="contactDTO.email" cssClass="error"></form:errors>
+			<br>
 			<label>Phone :</label>
 			<form:input path="contactDTO.phone" />
+			<br>
 			</div>
 			<input type="submit" value="register">
 
